@@ -1,9 +1,13 @@
-import Image from "next/image";
+import About from "./componets/about";
+import Presentation from "./componets/presentation";
+
+
 
 export default function Home() {
 	return (
-		<main>
-			<h1>ola mundo</h1>
+		<main >
+			<Presentation />
+			<About />
 		</main>
 	);
 }

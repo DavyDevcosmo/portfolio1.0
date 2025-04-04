@@ -3,7 +3,11 @@
 :root {
 	--background: #ffffff;
 	--foreground: #171717;
+  --color-primary: #0AC481;
+  --color-secondary: #D3D3D3 ;
 }
+
+
 
 @theme inline {
 	--color-background: var(--background);
@@ -23,4 +27,52 @@ body {
 	background: var(--background);
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.scrolling-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+}
+
+.scrolling-wrap .comm {
+  display: flex;
+  font-size: 2rem;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 600;
+  color: #000;
+  animation: scroll 50s linear infinite;
+  cursor: pointer;
+  margin: 0;
+}
+
+.scrolling-wrap .comm div {
+  margin: 0;
+}
+
+.scrolling-wrap .comm div:before {
+  content: '/';
+  -webkit-text-stroke: 0px #000;
+  color: #000;
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+.scrolling-wrap .comm div:nth-child(odd) {
+  /* Adicione estilos para elementos ímpares, se necessário */
+}
+
+
+.scrolling-wrap:hover .comm {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
