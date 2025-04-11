@@ -49,8 +49,8 @@ const CardsTechnology: React.FC = () => {
 	];
 
 	return (
-		<section className="h-auto bg-[#0A0F1C] relative min-h-screen">
-			<div className="absolute inset-0 w-full h-full z-0">
+		<section className="h-auto bg-[#0A0F1C] relative min-h-screen px-4 md:px-6 lg:px-8">
+			<div className="absolute inset-0 w-full h-screen z-0">
 				<Particles
 					particleColors={['#0AC4BF', '#07918D', '#055E5C']} // Tons que combinam com seu tema
 					particleCount={200}
@@ -64,7 +64,7 @@ const CardsTechnology: React.FC = () => {
 			</div>
 
 			<div className="relative z-10">
-				<h1 className="font-Poppins font-bold text-2xl text-white sm:text-2xl md:text-4xl lg:text-3xl text-center responsive-padding py-24">
+				<h1 className="font-Poppins font-bold text-base text-[#F3F4F6] md:text-4xl lg:text-3xl text-center responsive-padding py-24">
 					Utilizo as tecnologias de forma cirúrgica, pois entendo que cada
 					produto possui características únicas. apresento as linguagens e
 					frameworks no qual trabalho e possuo expertise.

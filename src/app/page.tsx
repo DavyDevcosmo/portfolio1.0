@@ -6,13 +6,18 @@ import Projects from "./componets/projects;";
 
 export default function Home() {
 	return (
-		<main>
+<>
+		<header>
 			<Presentation />
+
+		</header>
+		<main>
 			<About />
 			<Projects />
 			<CardsTechnology />
 			<Footer/>
 
 		</main>
+		</>
 	);
 }

@@ -6,7 +6,7 @@ import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 const Projects = () => {
 	return (
 		<section className="h-screen bg-[#0A0F1C] md:pt-16 relative">
-			<div className="relative h-14 text-center justify-center bg-center bg-cover flex items-center  md:justify-start md:mx-10 md:h-[40vh] lg:h-[60vh]">
+			<div className="relative text-center justify-center bg-center bg-cover flex items-center md:justify-start  h-[30vh] md:h-[40vh] lg:h-[60vh]">
 
 				<img
 					className="w-full h-full object-cover absolute top-0 left-0 "

@@ -9,8 +9,8 @@ import Squares from "@/blocks/Backgrounds/Squares/Squares";
 const Presentation = () => {
 	return (
 		<header>
-			<section className="w-full h-screen bg-gradient-primary relative flex flex-col overflow-hidden">
-				<div className="absolute inset-0 z-0 overflow-hidden">
+			<section className="w-full h-[70vh] lg:h-screen bg-gradient-primary relative flex flex-col overflow-hidden ">
+				<div className="absolute inset-0 z-0 overflow-hidden ">
 					<Squares
 						speed={0.3}
 						squareSize={50}
@@ -20,10 +20,10 @@ const Presentation = () => {
 
 					/>
 				</div>
-				<div className="flex-1 relative z-10">
+				<div className="flex-1 relative z-10 px-4 md:px-6 lg:px-8">
 
 
-					<h1 className="pl-10 pt-24 pb-10 font-Poppins font-bold text-7xl text-white">
+					<h1 className=" text-3xl pt-24 pb-10 font-Poppins font-bold md:text-7xl text-white">
 						<BlurText
 							text="Olá! sou Davy Cosmo,"
 							animateBy="words"
@@ -50,14 +50,14 @@ const Presentation = () => {
 					</h1>
 
 					<div>
-						<div className="pl-10 pt-8 flex gap-10">
+						<div className=" pt-16 flex gap-7 md:gap-10 ">
 							<a
 								href="https://www.linkedin.com/in/seu-perfil"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								<img
-									className="h-14 w-14"
+									className="h-12 w-12 md:h-14 md:w-14"
 									src="/img/icons8-github-64 1.svg"
 									alt="logo-github"
 								/>
@@ -69,7 +69,7 @@ const Presentation = () => {
 								rel="noopener noreferrer"
 							>
 								<img
-									className="h-12 w-12"
+									className="h-12 w-12 md:h-14 md:w-14"
 									src="/img/icons8-whatsapp.svg"
 									alt="logo-whatsapp"
 								/>
@@ -81,7 +81,7 @@ const Presentation = () => {
 								rel="noopener noreferrer"
 							>
 								<img
-									className="h-12 w-12"
+									className="h-12 w-12 md:h-14 md:w-14 "
 									src="/img/icons8-linkedin (1).svg"
 									alt="logo-linkedin"
 								/>
@@ -93,21 +93,21 @@ const Presentation = () => {
 								rel="noopener noreferrer"
 							>
 								<img
-									className="h-12 w-12"
-									src="/img/icons8-instagram (1).svg"
-									alt="logo-instagram"
+									className="h-12 w-12 md:h-14 md:w-14"
+									src="/img/email.svg"
+									alt="logo-email"
 								/>
 							</a>
 						</div>
 
 
+					</div>
+				</div>
 						<div
-							className="bg-green-500 h-14 w-full flex items-center mt-24 absolute bottom-0 "
+							className="bg-[var(--color-primary)] h-14 w-full flex items-center mt-24 absolute bottom-0 "
 						>
 							<ScrollingText />
 						</div>
-					</div>
-				</div>
 			</section>
 		</header>
 	);

@@ -5,11 +5,22 @@ import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 
 const About = () => {
 	return (
-		<section className="w-full h-screen relative overflow-hidden bg-[#111827]">
-			<div className="w-full h-full flex items-center justify-center">
-				<div className="flex items-center justify-center space-x-8 w-full max-w-6xl px-4">
+		<section className="w-full h-[70vh] md:h-screen relative overflow-hidden bg-[#111827] px-4 md:px-6 lg:px-8">
+			<div className=" w-full h-screen flex items-center justify-center">
+				<div className="flex-col lg:flex-row flex items-center justify-center space-x-8 w-full max-w-6xl px-4">
 
-					<div className="w-1/2">
+				
+					<div className="text-white flex flex-col items-center text-center"> 
+						<h1 className="text-2xl md:text-5xl font-bold font-montserrat text-[var(--color-primary)] md:pb-10 pt-9">
+
+							<SplitText
+								text="A cada tela, uma nova oportunidade de encantar o usuário."
+								delay={30}
+								className="inline-block"
+							/>
+						</h1>
+
+						<div className="w-1/2">
 						<AnimatedContent
 							distance={150}
 							direction="horizontal"
@@ -24,30 +35,20 @@ const About = () => {
 							<img
 								src="/img/minhafoto.png"
 								alt="Minha Foto"
-								className="object-cover w-96 h-96"
+								className="object-cover w-52 h-52 md:w-96 md-h-96  "
 
 							/>
 						</AnimatedContent>
 					</div>
 
-					{/* Texto */}
-					<div className="text-white flex flex-col items-center text-center"> {/* Adicionei items-center e text-center aqui */}
-						<h1 className="text-5xl font-medium font-montserrat text-[var(--color-primary)]">
-							<SplitText
-								text="A cada tela, uma nova oportunidade de encantar o usuário."
-								delay={30}
-								className="inline-block"
-							/>
-						</h1>
-
-						<h3 className="font-montserrat text-xl font-normal text-[var(--color-secondary)] mt-5 w-full max-w-96 mx-auto text-center"> {/* Adicionei mx-auto e text-center */}
+						<h3 className="font-montserrat text-base md:text-2xl font-normal text-[#F3F4F6] mt-5 w-full md:pt-12 lg:max-w-3xl text-center"> {/* Adicionei mx-auto e text-center */}
 							<SplitText
 								text="Olá, sou Davy Cosmo, desenvolvedor front-end freelancer, cursando Ciência da Computação, focado em React e com uma forte paixão por UX."
 								delay={30}
 							/>
 						</h3>
 
-						<div className="flex items-center justify-center mt-14">
+						<div className="flex items-center justify-center mt-14 ">
 							<GradientText
 								colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
 								animationSpeed={3}
@@ -61,6 +62,7 @@ const About = () => {
 							</GradientText>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</section>
