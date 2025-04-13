@@ -52,7 +52,7 @@ const Presentation = () => {
 					<div>
 						<div className=" pt-16 flex gap-7 md:gap-10 ">
 							<a
-								href="https://www.linkedin.com/in/seu-perfil"
+								href="https://github.com/DavyDevcosmo"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -63,20 +63,9 @@ const Presentation = () => {
 								/>
 							</a>
 
+						
 							<a
-								href="https://github.com/seu-usuario"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									className="h-12 w-12 md:h-14 md:w-14"
-									src="/img/icons8-whatsapp.svg"
-									alt="logo-whatsapp"
-								/>
-							</a>
-
-							<a
-								href="https://twitter.com/seu-usuario"
+								href="https://www.linkedin.com/in/davy-cosmo-2713152b5/"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -88,7 +77,7 @@ const Presentation = () => {
 							</a>
 
 							<a
-								href="https://instagram.com/seu-usuario"
+								href="davycampina2@gmail.com"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
@@ -104,7 +93,7 @@ const Presentation = () => {
 					</div>
 				</div>
 						<div
-							className="bg-[var(--color-primary)] h-14 w-full flex items-center mt-24 absolute bottom-0 "
+							className="bg-[var(--color-primary)] h-14 w-full flex items-center  absolute bottom-0 "
 						>
 							<ScrollingText />
 						</div>
