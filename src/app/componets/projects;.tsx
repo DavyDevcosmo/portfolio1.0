@@ -5,7 +5,7 @@ import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 
 const Projects = () => {
 	return (
-		<section className="h-screen bg-[#0A0F1C] md:pt-16 relative">
+		<section className="h-[50vh] md:h-[60vh] lg:h-[100vh] bg-[#0A0F1C] md:pt-16 relative">
 			<div className="relative text-center justify-center bg-center bg-cover flex items-center md:justify-start  h-[30vh] md:h-[40vh] lg:h-[60vh]">
 
 				<img
@@ -28,7 +28,9 @@ const Projects = () => {
 						</GradientText>
 					</FadeContent>
 				</div>
+
 			</div>
+			<h1 className="text-3xl pt-10 md:text-5xl font-bold font-montserrat text-[var(--color-primary)] md:pb-16 md:pt-24 w-full text-center">Projetos em andamento...</h1>
 		</section>
 	);
 };

@@ -32,28 +32,32 @@ const About = () => {
                             <img
                                 src="/img/minhafoto.png"
                                 alt="Minha Foto"
-                                className="object-cover size-64 md:size-96 lg:size-auto mx-auto " 
+                                className="object-cover size-64 md:size-96 lg:size-auto mx-auto "
                             />
                         </AnimatedContent>
                     </div>
 
-                    <div className="w-full lg:w-1/2 lg:pl-8 lg:items-start ">
-                        <h3 className="font-montserrat text-lg md:text-3xl font-normal text-[#F3F4F6]  mt-5 mb-10 md:mb-20 lg:mt-60">
+                    <div className="w-full lg:w-1/2 lg:pl-8 lg:items-start text-left">
+                        <h3 className="font-montserrat text-lg md:text-3xl font-normal text-[#F3F4F6] mt-5 mb-10 md:mb-20 lg:mt-40 leading-[1.4]">
                             <SplitText
-                                text="Olá, sou Davy Cosmo, desenvolvedor front-end freelancer, cursando Ciência da Computação, focado em React e com uma forte paixão por UX."
+                                text="Olá, me chamo Davy Comecei a estudar front-end em fevereiro de 2023 e atuo como 
+                                freelancer desde 2024, especializado em React, mas sempre aberto a aprender novas 
+                                tecnologias, Tenho uma forte paixão por User Experience (UX) e acessibilidade."
                                 delay={30}
                             />
                         </h3>
 
-                        <div className="flex items-center justify-center mt-14 mb-10 lg:justify-start">
+                        <div className="flex items-center justify-start mt-14 mb-10">
                             <GradientText
                                 colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
                                 animationSpeed={3}
                                 showBorder={true}
                             >
                                 <a
-                                    className="h-12 w-24 items-center flex justify-center rounded-2xl font-poppins font-bold  transition  md:duration-150 ease-in-out"
-                                    href="re"
+                                    className="h-14 w-28 flex items-center justify-center rounded-2xl font-poppins font-bold transition md:duration-150 ease-in-out"
+                                    href="https://drive.google.com/file/d/15Iq0ugnCwBPVVh72RGx-6wb3DP6wcjXX/view?usp=drivesdk"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     CV
                                 </a>

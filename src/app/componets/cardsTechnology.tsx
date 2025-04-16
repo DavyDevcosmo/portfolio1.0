@@ -16,7 +16,6 @@ import {
 	SiVercel,
 } from "react-icons/si";
 
-
 const CardsTechnology: React.FC = () => {
 	const iconSize = 100;
 
@@ -37,7 +36,6 @@ const CardsTechnology: React.FC = () => {
 		{ Icon: SiGit, colorHover: "#F05032", name: "Git" },
 		{ Icon: SiBootstrap, colorHover: "#7952B3", name: "Bootstrap" },
 		{ Icon: SiVercel, colorHover: "#FFFFFF", name: "Vercel" },
-
 		{ imgSrc: "/img/nextAuth.png", colorHover: "#000000", name: "NextAuth" },
 		{ imgSrc: "/img/zod.webp", colorHover: "#4A90E2", name: "Zod" },
 		{
@@ -49,15 +47,15 @@ const CardsTechnology: React.FC = () => {
 	];
 
 	return (
-		<section className="h-auto bg-[#0A0F1C] relative min-h-screen px-4 md:px-6 lg:px-8">
-			<div className="absolute inset-0 w-full h-screen z-0">
+		<section className="relative h-auto bg-[#0A0F1C] min-h-screen px-4 md:px-6 lg:px-8 overflow-hidden">
+			<div className="absolute inset-0 w-full h-full z-0">
 				<Particles
-					particleColors={['#0AC4BF', '#07918D', '#055E5C']} // Tons que combinam com seu tema
+					particleColors={['#0AC4BF', '#07918D', '#055E5C']}
 					particleCount={200}
 					particleSpread={10}
-					speed={0.1} // Mais lento para um efeito mais suave
+					speed={0.1}
 					particleBaseSize={200}
-					moveParticlesOnHover={true} // Desativado para não distrair
+					moveParticlesOnHover={true}
 					alphaParticles={true}
 					disableRotation={true}
 				/>
@@ -102,13 +100,13 @@ const CardsTechnology: React.FC = () => {
 							</div>
 
 							<style jsx>{`
-						.group:hover .transition-colors {
-						  color: ${colorHover} !important;
-						}
-						.group:hover img {
-						  transform: scale(1.1);
-						}
-					  `}</style>
+                .group:hover .transition-colors {
+                  color: ${colorHover} !important;
+                }
+                .group:hover img {
+                  transform: scale(1.1);
+                }
+              `}</style>
 						</div>
 					))}
 				</div>

@@ -63,7 +63,7 @@ const Presentation = () => {
 								/>
 							</a>
 
-						
+
 							<a
 								href="https://www.linkedin.com/in/davy-cosmo-2713152b5/"
 								target="_blank"
@@ -76,27 +76,17 @@ const Presentation = () => {
 								/>
 							</a>
 
-							<a
-								href="davycampina2@gmail.com"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<img
-									className="h-12 w-12 md:h-14 md:w-14"
-									src="/img/email.svg"
-									alt="logo-email"
-								/>
-							</a>
+
 						</div>
 
 
 					</div>
 				</div>
-						<div
-							className="bg-[var(--color-primary)] h-14 w-full flex items-center  absolute bottom-0 "
-						>
-							<ScrollingText />
-						</div>
+				<div
+					className="bg-[var(--color-primary)] h-14 w-full flex items-center  absolute bottom-0 "
+				>
+					<ScrollingText />
+				</div>
 			</section>
 		</header>
 	);

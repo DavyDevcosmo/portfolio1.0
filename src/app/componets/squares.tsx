@@ -61,7 +61,7 @@ const Squares: React.FC<SquaresProps> = ({
 					if (
 						hoveredSquareRef.current &&
 						Math.floor((x - startX) / squareSize) ===
-							hoveredSquareRef.current.x &&
+						hoveredSquareRef.current.x &&
 						Math.floor((y - startY) / squareSize) === hoveredSquareRef.current.y
 					) {
 						ctx.fillStyle = hoverFillColor;
