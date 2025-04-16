@@ -22,8 +22,15 @@ const Presentation = () => {
 				</div>
 				<div className="flex-1 relative z-10 px-4 md:px-6 lg:px-8">
 
+					<img
+						src="/img/logo-semFundo.png"
+						alt="Descrição da imagem"
+						className="object-contain  size-34 md:size-64 lg:size-52 mt-0 "
 
-					<h1 className=" text-3xl pt-24 pb-10 font-Poppins font-bold md:text-7xl text-white">
+					/>
+
+
+					<h1 className=" text-3xl pb-6 font-Poppins font-bold md:text-7xl text-white">
 						<BlurText
 							text="Olá! sou Davy Cosmo,"
 							animateBy="words"
@@ -50,7 +57,7 @@ const Presentation = () => {
 					</h1>
 
 					<div>
-						<div className=" pt-16 flex gap-7 md:gap-10 ">
+						<div className=" pt-8 flex gap-7 md:gap-10 ">
 							<a
 								href="https://github.com/DavyDevcosmo"
 								target="_blank"
