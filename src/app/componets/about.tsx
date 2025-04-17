@@ -40,9 +40,10 @@ const About = () => {
                     <div className="w-full lg:w-1/2 lg:pl-8 lg:items-start text-left">
                         <h3 className="font-montserrat text-lg md:text-3xl font-normal text-[#F3F4F6] mt-5 mb-10 md:mb-20 lg:mt-40 leading-[1.4]">
                             <SplitText
-                                text="Olá, me chamo Davy sou desenvolvedor front-end 
-                                freelancer, especializado em React, mas sempre aberto a aprender novas 
-                                tecnologias, Tenho uma forte paixão por User Experience (UX) e acessibilidade."
+                                text="Olá, me chamo Davy  e sou desenvolvedor front-end.
+Sou freelancer especializado em React e atualmente estou cursando Ciência da Computação.
+Estou sempre aberto a aprender novas tecnologias para aprimorar meu trabalho.
+ Tenho uma forte paixão por experiência do usuário (User Experience, UX) e acessibilidade."
                                 delay={30}
                             />
                         </h3>
