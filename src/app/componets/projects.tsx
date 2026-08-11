@@ -2,7 +2,7 @@
 
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
-import type { IconType } from "react-icons";
+import type { ComponentType } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 import {
@@ -15,10 +15,15 @@ import {
 	SiTypescript,
 } from "react-icons/si";
 
+type TechIcon = ComponentType<{ className?: string }>;
+
 type Tech = {
 	name: string;
-	icon: IconType;
+	icon: TechIcon;
 };
+
+const GithubIcon = FaGithub as TechIcon;
+const ExternalLinkIcon = FiExternalLink as TechIcon;
 
 type Project = {
 	title: string;
@@ -38,13 +43,13 @@ const projects: Project[] = [
 		githubUrl: "https://github.com/DavyDevcosmo/odontopro",
 		demoUrl: "https://psicopro.vercel.app",
 		technologies: [
-			{ name: "Next.js 15", icon: SiNextdotjs },
-			{ name: "React 19", icon: SiReact },
-			{ name: "TypeScript", icon: SiTypescript },
-			{ name: "Tailwind CSS", icon: SiTailwindcss },
-			{ name: "PostgreSQL", icon: SiPostgresql },
-			{ name: "Prisma", icon: SiPrisma },
-			{ name: "Stripe", icon: SiStripe },
+			{ name: "Next.js 15", icon: SiNextdotjs as TechIcon },
+			{ name: "React 19", icon: SiReact as TechIcon },
+			{ name: "TypeScript", icon: SiTypescript as TechIcon },
+			{ name: "Tailwind CSS", icon: SiTailwindcss as TechIcon },
+			{ name: "PostgreSQL", icon: SiPostgresql as TechIcon },
+			{ name: "Prisma", icon: SiPrisma as TechIcon },
+			{ name: "Stripe", icon: SiStripe as TechIcon },
 		],
 	},
 	{
@@ -54,10 +59,9 @@ const projects: Project[] = [
 		image: "/img/bg-portfolio.png",
 		githubUrl: "https://github.com/DavyDevcosmo/portfolio1.0",
 		technologies: [
-			{ name: "Next.js 15", icon: SiNextdotjs },
-			{ name: "TypeScript", icon: SiTypescript },
-			{ name: "Tailwind CSS", icon: SiTailwindcss },
-
+			{ name: "Next.js 15", icon: SiNextdotjs as TechIcon },
+			{ name: "TypeScript", icon: SiTypescript as TechIcon },
+			{ name: "Tailwind CSS", icon: SiTailwindcss as TechIcon },
 		],
 	},
 ];
@@ -143,7 +147,7 @@ const Projects = () => {
 											aria-label={`Código do ${project.title} no GitHub`}
 											className="text-white transition hover:text-[var(--color-primary)]"
 										>
-											<FaGithub className="size-6 sm:size-7 md:size-8" />
+											<GithubIcon className="size-6 sm:size-7 md:size-8" />
 										</a>
 										{project.demoUrl && (
 											<a
@@ -153,7 +157,7 @@ const Projects = () => {
 												aria-label={`Acessar o projeto ${project.title}`}
 												className="text-white transition hover:text-[var(--color-primary)]"
 											>
-												<FiExternalLink className="size-6 sm:size-7 md:size-8" />
+												<ExternalLinkIcon className="size-6 sm:size-7 md:size-8" />
 											</a>
 										)}
 									</div>

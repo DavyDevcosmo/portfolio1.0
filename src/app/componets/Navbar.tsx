@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 const links = [
 	{ href: "#home", label: "Início" },
@@ -46,7 +45,25 @@ const Navbar = () => {
 					aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
 					aria-expanded={isOpen}
 				>
-					{isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+					{isOpen ? (
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path
+								d="M6 6l12 12M18 6L6 18"
+								stroke="currentColor"
+								strokeWidth="2"
+								strokeLinecap="round"
+							/>
+						</svg>
+					) : (
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+							<path
+								d="M4 7h16M4 12h16M4 17h16"
+								stroke="currentColor"
+								strokeWidth="2"
+								strokeLinecap="round"
+							/>
+						</svg>
+					)}
 				</button>
 			</div>
 
