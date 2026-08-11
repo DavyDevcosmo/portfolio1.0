@@ -5,7 +5,7 @@ import SplitText from "@/blocks/TextAnimations/SplitText/SplitText";
 
 const About = () => {
     return (
-        <section className="w-full lg:min-h-screen relative bg-[#000000] px-4 md:px-6 lg:px-8">
+        <section id="about" className="w-full lg:min-h-screen relative bg-[#000000] px-4 md:px-6 lg:px-8 scroll-mt-16">
             <div className="w-full">
                 <h1 className="text-3xl pt-10 md:text-5xl font-bold font-montserrat text-[var(--color-primary)] md:pb-16 md:pt-24 w-full text-center">
                     <SplitText

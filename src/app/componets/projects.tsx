@@ -64,7 +64,7 @@ const projects: Project[] = [
 
 const Projects = () => {
 	return (
-		<section className="min-h-[40vh] md:min-h-[60vh] lg:min-h-screen bg-[#0A0F1C] md:pt-16 relative pb-12 md:pb-20 ">
+		<section id="projects" className="min-h-[40vh] md:min-h-[60vh] lg:min-h-screen bg-[#0A0F1C] md:pt-16 relative pb-12 md:pb-20 scroll-mt-16">
 			<div className="relative flex items-center justify-center md:justify-start h-[28vh] sm:h-[32vh] md:h-[40vh] lg:h-[55vh] overflow-hidden">
 				<img
 					className="w-full h-full object-cover absolute inset-0"

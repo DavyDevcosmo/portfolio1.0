@@ -30,7 +30,7 @@ const CardsTechnology: React.FC = () => {
 	];
 
 	return (
-		<section className="relative h-auto bg-[#0A0F1C] min-h-screen px-4 md:px-6 lg:px-8 overflow-hidden">
+		<section id="technologies" className="relative h-auto bg-[#0A0F1C] min-h-screen px-4 md:px-6 lg:px-8 overflow-hidden scroll-mt-16">
 			<div className="absolute inset-0 w-full h-full z-0">
 				<Particles
 					particleColors={["#0AC4BF", "#07918D", "#055E5C"]}
