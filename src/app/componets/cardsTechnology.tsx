@@ -1,7 +1,13 @@
 "use client";
 
-import Particles from "@/blocks/Backgrounds/Particles/Particles";
-import React, { useState } from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { useState } from "react";
+
+const Particles = dynamic(
+	() => import("@/blocks/Backgrounds/Particles/Particles"),
+	{ ssr: false },
+);
 
 interface TechnologyItem {
 	imgSrc: string;
@@ -10,7 +16,7 @@ interface TechnologyItem {
 	size?: number;
 }
 
-const CardsTechnology: React.FC = () => {
+const CardsTechnology = () => {
 	const [hovered, setHovered] = useState<string | null>(null);
 	const iconSize = 100;
 
@@ -30,11 +36,14 @@ const CardsTechnology: React.FC = () => {
 	];
 
 	return (
-		<section id="technologies" className="relative h-auto bg-[#0A0F1C] min-h-screen px-4 md:px-6 lg:px-8 overflow-hidden scroll-mt-16">
+		<section
+			id="technologies"
+			className="relative h-auto bg-[#0A0F1C] min-h-screen px-4 md:px-6 lg:px-8 overflow-hidden scroll-mt-16"
+		>
 			<div className="absolute inset-0 w-full h-full z-0">
 				<Particles
 					particleColors={["#0AC4BF", "#07918D", "#055E5C"]}
-					particleCount={200}
+					particleCount={150}
 					particleSpread={10}
 					speed={0.1}
 					particleBaseSize={100}
@@ -46,42 +55,45 @@ const CardsTechnology: React.FC = () => {
 
 			<div className="relative z-10">
 				<h1 className="font-Poppins font-bold text-base text-[#F3F4F6] md:text-4xl lg:text-3xl text-center responsive-padding py-24">
-					Utilizo as tecnologias de forma cirúrgica, pois entendo que cada
-					produto possui características únicas. Apresento as linguagens e
-					frameworks no qual trabalho e possuo expertise.
+					Utilizo as tecnologias de forma cirúrgica, pois entendo que cada produto
+					possui características únicas. Apresento as linguagens e frameworks no qual
+					trabalho e possuo expertise.
 				</h1>
 
 				<div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-					{icons.map((item) => (
-						<div
-							key={item.name}
-							className="relative flex flex-col items-center cursor-pointer group"
-							onMouseEnter={() => setHovered(item.name)}
-							onMouseLeave={() => setHovered(null)}
-						>
-							<div className="absolute top-0 w-2/3 h-[1px] bg-[#4e4e4e] transition-all duration-700 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-[#0AC4BF] group-hover:via-[#07918D] group-hover:to-[#055E5C] group-hover:h-[4px]" />
+					{icons.map((item) => {
+						const size = item.size || iconSize;
 
-							<div className="flex flex-col items-center group-hover:-translate-y-4 duration-700 mt-16">
-								<img
-									src={item.imgSrc}
-									alt={item.name}
-									className="object-contain"
-									style={{
-										width: item.size || iconSize,
-										height: item.size || iconSize,
-									}}
-								/>
-								<span
-									className="mt-2 text-lg font-semibold transition-colors duration-300 mb-24"
-									style={{
-										color: hovered === item.name ? item.colorHover : "#cdcdcd",
-									}}
-								>
-									{item.name}
-								</span>
+						return (
+							<div
+								key={item.name}
+								className="relative flex flex-col items-center cursor-pointer group"
+								onMouseEnter={() => setHovered(item.name)}
+								onMouseLeave={() => setHovered(null)}
+							>
+								<div className="absolute top-0 w-2/3 h-[1px] bg-[#4e4e4e] transition-all duration-700 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-[#0AC4BF] group-hover:via-[#07918D] group-hover:to-[#055E5C] group-hover:h-[4px]" />
+
+								<div className="flex flex-col items-center group-hover:-translate-y-4 duration-700 mt-16">
+									<Image
+										src={item.imgSrc}
+										alt={item.name}
+										width={size}
+										height={size}
+										loading="lazy"
+										className="object-contain"
+									/>
+									<span
+										className="mt-2 text-lg font-semibold transition-colors duration-300 mb-24"
+										style={{
+											color: hovered === item.name ? item.colorHover : "#cdcdcd",
+										}}
+									>
+										{item.name}
+									</span>
+								</div>
 							</div>
-						</div>
-					))}
+						);
+					})}
 				</div>
 			</div>
 		</section>

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-montserrat: var(--font-montserrat-family), ui-sans-serif, sans-serif;
+  --font-poppins: var(--font-poppins-family), ui-sans-serif, sans-serif;
+  --font-Poppins: var(--font-poppins-family), ui-sans-serif, sans-serif;
+}
+
 :root {
   --color-primary: #0AC481;
   --color-secondary: #D3D3D3 ;

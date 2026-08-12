@@ -2,6 +2,7 @@
 
 import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
 import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
+import Image from "next/image";
 import type { ComponentType } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -70,10 +71,13 @@ const Projects = () => {
 	return (
 		<section id="projects" className="min-h-[40vh] md:min-h-[60vh] lg:min-h-screen bg-[#0A0F1C] md:pt-16 relative pb-12 md:pb-20 scroll-mt-16">
 			<div className="relative flex items-center justify-center md:justify-start h-[28vh] sm:h-[32vh] md:h-[40vh] lg:h-[55vh] overflow-hidden">
-				<img
-					className="w-full h-full object-cover absolute inset-0"
+				<Image
+					className="object-cover"
 					src="/img/homeImg.png"
 					alt=""
+					fill
+					sizes="100vw"
+					loading="lazy"
 				/>
 				<div className="absolute inset-0 bg-black/40" />
 
@@ -104,11 +108,14 @@ const Projects = () => {
 							key={project.title}
 							className="group flex flex-col overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 bg-[#111827] transition duration-300 hover:border-[var(--color-primary)]/50"
 						>
-							<div className="relative w-full overflow-hidden bg-[#0A0F1C]">
-								<img
+							<div className="relative w-full overflow-hidden bg-[#0A0F1C] aspect-[16/10]">
+								<Image
 									src={project.image}
 									alt={`Preview do projeto ${project.title}`}
-									className="w-full h-auto object-contain block transition duration-500 group-hover:scale-105"
+									fill
+									sizes="(max-width: 640px) 100vw, 50vw"
+									loading="lazy"
+									className="object-contain transition duration-500 group-hover:scale-105"
 								/>
 							</div>
 
