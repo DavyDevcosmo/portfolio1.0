@@ -67,7 +67,7 @@ Estou sempre aberto a aprender novas tecnologias para aprimorar meu trabalho.
 							>
 								<a
 									className="h-14 w-28 flex items-center justify-center rounded-2xl font-poppins font-bold transition md:duration-150 ease-in-out"
-									href="https://drive.google.com/file/d/16AutjS_s5weyRimiWo5U2kUCBJ5idOqo/view?usp=drivesdk"
+									href="https://docs.google.com/document/d/1Zb-l9rXLwU_anb1RmjCY29NkowHLhNNZc4bOfbVNDz8/edit?usp=sharing"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
