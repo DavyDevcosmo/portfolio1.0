@@ -1,18 +1,32 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
+import { Anton, JetBrains_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
 	subsets: ["latin"],
-	weight: ["400", "600", "700"],
+	weight: ["400", "500", "600", "700"],
 	variable: "--font-montserrat-family",
 	display: "swap",
 });
 
 const poppins = Poppins({
 	subsets: ["latin"],
-	weight: ["400", "600", "700", "800"],
+	weight: ["600", "700", "800", "900"],
 	variable: "--font-poppins-family",
+	display: "swap",
+});
+
+const anton = Anton({
+	subsets: ["latin"],
+	weight: "400",
+	variable: "--font-anton-family",
+	display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+	subsets: ["latin"],
+	weight: ["500", "700"],
+	variable: "--font-mono-family",
 	display: "swap",
 });
 
@@ -47,7 +61,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="pt-BR"
-			className={`scroll-smooth ${montserrat.variable} ${poppins.variable}`}
+			className={`scroll-smooth ${montserrat.variable} ${poppins.variable} ${anton.variable} ${jetbrainsMono.variable}`}
 		>
 			<body className="antialiased">{children}</body>
 		</html>
