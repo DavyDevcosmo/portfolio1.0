@@ -1,173 +1,132 @@
-"use client";
-
-import FadeContent from "@/blocks/Animations/FadeContent/FadeContent";
-import GradientText from "@/blocks/TextAnimations/GradientText/GradientText";
 import Image from "next/image";
-import type { ComponentType } from "react";
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
-import {
-	SiNextdotjs,
-	SiPostgresql,
-	SiPrisma,
-	SiReact,
-	SiStripe,
-	SiTailwindcss,
-	SiTypescript,
-} from "react-icons/si";
-
-type TechIcon = ComponentType<{ className?: string }>;
-
-type Tech = {
-	name: string;
-	icon: TechIcon;
-};
-
-const GithubIcon = FaGithub as TechIcon;
-const ExternalLinkIcon = FiExternalLink as TechIcon;
+import { ArrowIcon } from "./icons";
+import { btn, card, chip, h2, secHead, secWrap, tag } from "./ui";
 
 type Project = {
 	title: string;
+	kind: string;
 	description: string;
 	image: string;
-	githubUrl: string;
-	demoUrl?: string;
-	technologies?: Tech[];
+	alt: string;
+	demoUrl: string;
+	githubUrl?: string;
+	technologies: string[];
 };
 
 const projects: Project[] = [
 	{
 		title: "PsicoPro",
+		kind: "SaaS · 01",
 		description:
-			"Gestão simples e eficiente para psicólogos e clínicas. A plataforma centraliza agendamentos, serviços e planos em um único ecossistema, oferecendo uma página pública e intuitiva para que os pacientes agendem suas consultas online em poucos cliques.",
-		image: "/img/bg-psicopro.png",
-		githubUrl: "https://github.com/DavyDevcosmo/odontopro",
+			"Gestão simples e eficiente para psicólogos e clínicas. Centraliza agendamentos, serviços e planos, com uma página pública para o paciente agendar a consulta online em poucos cliques.",
+		image: "/img/psicopro-preview.jpg",
+		alt: "Painel de agendamentos do PsicoPro com versão mobile da página pública",
 		demoUrl: "https://psicopro.vercel.app",
-		technologies: [
-			{ name: "Next.js 15", icon: SiNextdotjs as TechIcon },
-			{ name: "React 19", icon: SiReact as TechIcon },
-			{ name: "TypeScript", icon: SiTypescript as TechIcon },
-			{ name: "Tailwind CSS", icon: SiTailwindcss as TechIcon },
-			{ name: "PostgreSQL", icon: SiPostgresql as TechIcon },
-			{ name: "Prisma", icon: SiPrisma as TechIcon },
-			{ name: "Stripe", icon: SiStripe as TechIcon },
-		],
+		githubUrl: "https://github.com/DavyDevcosmo/odontopro",
+		technologies: ["Next.js 15", "React 19", "TypeScript", "Tailwind", "PostgreSQL", "Prisma", "Stripe"],
 	},
 	{
 		title: "Portfólio",
+		kind: "Portfólio · 02",
 		description:
-			"Meu portfólio profissional e hub de projetos. Uma aplicação completa criada para demonstrar minhas habilidades em desenvolvimento front-end, arquitetura de componentes, design responsivo e microinterações.",
+			"Meu portfólio pessoal: apresenta quem eu sou, minhas ferramentas e os projetos que construí, com uma interface neo-brutalista pensada para UX e acessibilidade.",
 		image: "/img/bg-portfolio.png",
-		githubUrl: "https://github.com/DavyDevcosmo/portfolio1.0",
-		technologies: [
-			{ name: "Next.js 15", icon: SiNextdotjs as TechIcon },
-			{ name: "TypeScript", icon: SiTypescript as TechIcon },
-			{ name: "Tailwind CSS", icon: SiTailwindcss as TechIcon },
-		],
+		alt: "Tela do portfólio de Davy Cosmo",
+		demoUrl: "https://www.davycosmo.com",
+		technologies: ["Next.js", "Tailwind", "Vercel"],
 	},
 ];
 
+const actionBtn = `${btn} min-h-11 rounded-brut border-3 border-ink px-[18px] py-3 font-display text-ink shadow-[4px_4px_0_var(--color-ink)] max-sm:flex-1`;
+
 const Projects = () => {
 	return (
-		<section id="projects" className="min-h-[40vh] md:min-h-[60vh] lg:min-h-screen bg-[#0A0F1C] md:pt-16 relative pb-12 md:pb-20 scroll-mt-16">
-			<div className="relative flex items-center justify-center md:justify-start h-[28vh] sm:h-[32vh] md:h-[40vh] lg:h-[55vh] overflow-hidden">
-				<Image
-					className="object-cover"
-					src="/img/homeImg.png"
-					alt=""
-					fill
-					sizes="100vw"
-					loading="lazy"
-				/>
-				<div className="absolute inset-0 bg-black/40" />
-
-				<div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-					<FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-						<h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold stroke-text rampart-one-regular">
-							PORTFÓLIO
-						</h1>
-						<GradientText
-							className="text-base sm:text-lg md:text-3xl lg:text-4xl font-light lg:font-extralight mt-2"
-							colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-							animationSpeed={9}
+		<section
+			id="projetos"
+			className="border-b-3 border-ink bg-ink text-paper lg:flex lg:min-h-[calc(var(--h-full)_-_74px)] lg:flex-col lg:justify-center"
+		>
+			<div
+				className={`${secWrap} lg:gap-[clamp(20px,calc(3.4*var(--vh)),48px)] lg:py-[clamp(32px,calc(5*var(--vh)),80px)]`}
+			>
+				<div className={secHead}>
+					<div className="flex max-w-[720px] flex-col gap-5 lg:gap-[clamp(10px,calc(1.8*var(--vh)),20px)]">
+						<span className={`${tag} bg-accent text-ink`}>&lt;Projetos /&gt;</span>
+						<h2
+							className={`${h2} text-[clamp(34px,calc(4.6*var(--vw)),64px)] leading-none lg:text-[clamp(30px,min(calc(4.6*var(--vw)),calc(6.4*var(--vh))),64px)]`}
 						>
-							Ùltimos Cases de Criação de Sites
-						</GradientText>
-					</FadeContent>
+							Cases que saíram{" "}
+							<br className="lg:hidden" />
+							do papel.
+						</h2>
+					</div>
+					<a
+						className={`${btn} min-h-11 rounded-brut border-3 border-paper bg-paper px-[22px] py-3.5 font-display text-ink shadow-[5px_5px_0_var(--color-accent)] max-sm:w-full`}
+						href="https://github.com/DavyDevcosmo"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Mais no GitHub
+						<ArrowIcon />
+					</a>
 				</div>
-			</div>
 
-			<div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 pt-8 sm:pt-12 md:pt-20">
-				<h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-montserrat text-[var(--color-primary)] mb-8 sm:mb-10 md:mb-16 text-center">
-					Projetos
-				</h2>
-
-				<div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 md:gap-8 lg:gap-10">
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-10">
 					{projects.map((project) => (
 						<article
 							key={project.title}
-							className="group flex flex-col overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 bg-[#111827] transition duration-300 hover:border-[var(--color-primary)]/50"
+							className={`${card} flex flex-col overflow-hidden rounded-brut border-3 border-paper bg-paper text-ink shadow-[10px_10px_0_var(--color-accent)] max-sm:shadow-[6px_6px_0_var(--color-accent)]`}
 						>
-							<div className="relative w-full overflow-hidden bg-[#0A0F1C] aspect-[16/10]">
+							<div className="relative aspect-[16/10] border-b-3 border-ink bg-white lg:aspect-auto lg:h-[clamp(110px,calc(16*var(--vh)),260px)]">
 								<Image
 									src={project.image}
-									alt={`Preview do projeto ${project.title}`}
+									alt={project.alt}
 									fill
-									sizes="(max-width: 640px) 100vw, 50vw"
-									loading="lazy"
-									className="object-contain transition duration-500 group-hover:scale-105"
+									sizes="(max-width: 900px) 100vw, 600px"
+									className="object-cover"
 								/>
 							</div>
-
-							<div className="flex flex-1 flex-col p-4 sm:p-5 md:p-8">
-								<h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-montserrat text-white mb-2 sm:mb-3">
+							<div className="flex flex-auto flex-col gap-[18px] p-8 max-sm:gap-3.5 max-sm:p-5 lg:gap-[clamp(10px,calc(1.6*var(--vh)),18px)] lg:p-[clamp(18px,calc(2.8*var(--vh)),32px)]">
+								<div className="flex items-center justify-between gap-3">
+									<span className="font-mono text-[13px] font-bold tracking-[.06em] uppercase">
+										{project.kind}
+									</span>
+									<span className="flex-none rounded-full border-2 border-ink bg-emerald px-2.5 py-1 font-mono text-[12px] font-bold">
+										No ar
+									</span>
+								</div>
+								<h3 className="font-display text-[44px] leading-none font-black tracking-[-0.035em] max-sm:text-[32px] lg:text-[clamp(28px,calc(4.6*var(--vh)),44px)]">
 									{project.title}
 								</h3>
-								<p className="text-[#D3D3D3] font-montserrat text-sm sm:text-base md:text-lg mb-5 sm:mb-6 leading-relaxed flex-1">
+								<p className="text-[16px] leading-[1.65] font-medium max-sm:text-[15px] lg:text-[15px] lg:leading-[1.55]">
 									{project.description}
 								</p>
-
-								<div className="mt-auto flex items-center justify-between gap-3">
-									<div className="flex flex-wrap items-center gap-2 sm:gap-3">
-										{project.technologies?.map((tech) => {
-											const Icon = tech.icon;
-											return (
-												<span
-													key={tech.name}
-													className="relative inline-flex items-center justify-center text-white/80 transition hover:text-[var(--color-primary)] group/tech"
-													aria-label={tech.name}
-												>
-													<Icon className="size-5 sm:size-6" />
-													<span className="pointer-events-none absolute -top-9 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-md bg-[#0A0F1C] px-2 py-1 text-xs font-montserrat text-white opacity-0 shadow-lg transition group-hover/tech:opacity-100">
-														{tech.name}
-													</span>
-												</span>
-											);
-										})}
-									</div>
-
-									<div className="flex shrink-0 items-center gap-4 sm:gap-5">
+								<ul className="flex flex-wrap gap-2">
+									{project.technologies.map((tech) => (
+										<li key={tech} className={`${chip} bg-white px-2 py-1 text-[12px]`}>
+											{tech}
+										</li>
+									))}
+								</ul>
+								<div className="mt-auto flex flex-wrap gap-3 pt-2">
+									<a
+										className={`${actionBtn} bg-accent`}
+										href={project.demoUrl}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										Ver online
+										<ArrowIcon size={16} />
+									</a>
+									{project.githubUrl && (
 										<a
+											className={`${actionBtn} bg-white`}
 											href={project.githubUrl}
 											target="_blank"
 											rel="noopener noreferrer"
-											aria-label={`Código do ${project.title} no GitHub`}
-											className="text-white transition hover:text-[var(--color-primary)]"
 										>
-											<GithubIcon className="size-6 sm:size-7 md:size-8" />
+											Código
 										</a>
-										{project.demoUrl && (
-											<a
-												href={project.demoUrl}
-												target="_blank"
-												rel="noopener noreferrer"
-												aria-label={`Acessar o projeto ${project.title}`}
-												className="text-white transition hover:text-[var(--color-primary)]"
-											>
-												<ExternalLinkIcon className="size-6 sm:size-7 md:size-8" />
-											</a>
-										)}
-									</div>
+									)}
 								</div>
 							</div>
 						</article>
