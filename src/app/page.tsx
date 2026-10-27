@@ -1,42 +1,26 @@
-import dynamic from "next/dynamic";
+import BackToTop from "./componets/backToTop";
+import About from "./componets/about";
+import Contact from "./componets/contact";
 import Footer from "./componets/footer";
 import Navbar from "./componets/Navbar";
+import OpenSource from "./componets/openSource";
 import Presentation from "./componets/presentation";
-
-const About = dynamic(() => import("./componets/about"), {
-	loading: () => (
-		<section id="about" className="min-h-screen bg-black scroll-mt-16" aria-hidden="true" />
-	),
-});
-
-const Projects = dynamic(() => import("./componets/projects"), {
-	loading: () => (
-		<section id="projects" className="min-h-screen bg-[#0A0F1C] scroll-mt-16" aria-hidden="true" />
-	),
-});
-
-const CardsTechnology = dynamic(() => import("./componets/cardsTechnology"), {
-	loading: () => (
-		<section
-			id="technologies"
-			className="min-h-screen bg-[#0A0F1C] scroll-mt-16"
-			aria-hidden="true"
-		/>
-	),
-});
+import Projects from "./componets/projects";
+import Tools from "./componets/tools";
 
 export default function Home() {
 	return (
 		<>
 			<Navbar />
-			<header>
-				<Presentation />
-			</header>
 			<main>
+				<Presentation />
+				<Tools />
 				<About />
 				<Projects />
-				<CardsTechnology />
+				<OpenSource />
+				<Contact />
 			</main>
+			<BackToTop />
 			<footer>
 				<Footer />
 			</footer>
