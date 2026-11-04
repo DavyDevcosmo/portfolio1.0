@@ -9,7 +9,7 @@ const skills = [
 	{ title: "Testes", text: "Vitest, React Testing Library, Playwright, Lighthouse CI" },
 	{
 		title: "Comunidade",
-		text: "Membro da He4rt Devs, contribuindo com o site e com quem está começando.",
+		text: "Contribuidor open source na He4rt Devs: UI/UX, correção de bugs, documentação e code review.",
 		inverse: true,
 	},
 ];
@@ -18,40 +18,40 @@ const About = () => {
 	return (
 		<section
 			id="sobre"
-			className="border-b-3 border-ink lg:flex lg:min-h-[735px] lg:flex-col lg:justify-center"
+			className="border-b-3 border-ink lg:flex lg:min-h-183.75 lg:flex-col lg:justify-center"
 		>
 			<div className={`${secWrap} lg:py-20`}>
 				<div className="grid grid-cols-2 items-start gap-14 max-md:grid-cols-1">
 					<div className="flex flex-col gap-6">
-						<h2 className={`${h2} text-[clamp(34px,calc(4.2*var(--vw)),56px)] leading-[1.04]`}>
+						<h2 className={`${h2} text-title-about`}>
 							A cada tela, uma nova chance de{" "}
 							<span className="box-decoration-clone bg-accent px-[.12em]">encantar</span> o usuário.
 						</h2>
-						<p className="max-w-[560px] text-[18px] leading-[1.7] font-medium max-sm:text-[16px]">
+						<p className="max-w-140 text-lg leading-relaxed font-medium max-sm:text-base">
 							Me chamo Davy e sou desenvolvedor full-stack freelancer. Comecei no front-end com
 							React e hoje construo SaaS completos: autenticação, pagamentos, banco de dados e a
-							interface que o cliente vê. Estou cursando Ciência da Computação e tenho paixão por
+							interface. Estou cursando Ciência da Computação e tenho paixão por
 							experiência do usuário e acessibilidade.
 						</p>
-						<p className="max-w-[560px] text-[18px] leading-[1.7] font-medium max-sm:text-[16px]">
+						<p className="max-w-140 text-lg leading-relaxed font-medium max-sm:text-base">
 							Também participo da comunidade <strong>He4rt Devs</strong>, onde aprendo e contribuo
 							com quem está construindo junto.
 						</p>
 					</div>
-					<div className="grid grid-cols-2 gap-[22px] pb-7 max-sm:grid-cols-1 max-sm:gap-[18px] max-sm:pb-0">
+					<div className="grid grid-cols-2 gap-5.5 pb-7 max-sm:grid-cols-1 max-sm:gap-4.5 max-sm:pb-0">
 						{skills.map((skill, i) => (
 							<div
 								key={skill.title}
-								className={`${card} flex flex-col gap-3 rounded-brut border-3 border-ink p-[26px] max-sm:p-5 ${
+								className={`${card} flex flex-col gap-3 rounded-brut border-3 border-ink p-6.5 max-sm:p-5 ${
 									i % 2 === 1 ? "translate-y-7 max-sm:translate-y-0" : ""
 								} ${
 									skill.inverse
-										? "bg-ink text-paper shadow-[6px_6px_0_var(--color-emerald)] max-sm:shadow-[5px_5px_0_var(--color-emerald)]"
-										: "bg-white shadow-[6px_6px_0_var(--color-ink)] max-sm:shadow-[5px_5px_0_var(--color-ink)]"
+										? "bg-ink text-paper shadow-hard-6 shadow-emerald max-sm:shadow-hard-5"
+										: "bg-white shadow-hard-6 shadow-ink max-sm:shadow-hard-5"
 								}`}
 							>
-								<h3 className="font-display text-[22px] font-extrabold">{skill.title}</h3>
-								<p className="text-[15px] leading-[1.55] font-medium">{skill.text}</p>
+								<h3 className="font-display text-2xl font-extrabold">{skill.title}</h3>
+								<p className="text-base leading-normal font-medium">{skill.text}</p>
 							</div>
 						))}
 					</div>

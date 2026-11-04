@@ -19,7 +19,7 @@ const Tools = () => {
 						{tools.map((tool, i) => (
 							<Fragment key={tool.name}>
 								{tool.group === "test" && tools[i - 1]?.group === "build" && (
-									<li className="h-12 w-[3px] bg-paper" aria-hidden="true" />
+									<li className="h-12 w-0.75 bg-paper" aria-hidden="true" />
 								)}
 								<li>
 									<svg

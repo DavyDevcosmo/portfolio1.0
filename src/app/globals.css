@@ -24,6 +24,16 @@
 
   --radius-brut: 14px;
 
+  /* Sombras duras (deslocamento em px). A cor vem de shadow-ink, shadow-emerald, shadow-accent ou shadow-white. */
+  --shadow-hard-1: 1px 1px 0 #0a0f1c;
+  --shadow-hard-3: 3px 3px 0 #0a0f1c;
+  --shadow-hard-4: 4px 4px 0 #0a0f1c;
+  --shadow-hard-5: 5px 5px 0 #0a0f1c;
+  --shadow-hard-6: 6px 6px 0 #0a0f1c;
+  --shadow-hard-7: 7px 7px 0 #0a0f1c;
+  --shadow-hard-8: 8px 8px 0 #0a0f1c;
+  --shadow-hard-10: 10px 10px 0 #0a0f1c;
+
   --animate-marquee: marquee 45s linear infinite;
   --animate-bob: bob 1.8s ease-in-out infinite;
 
@@ -40,6 +50,28 @@
   --font-body: var(--font-montserrat-family), system-ui, sans-serif;
   --font-poster: var(--font-anton-family), var(--font-poppins-family), sans-serif;
   --font-mono: var(--font-mono-family), ui-monospace, monospace;
+
+  /* Tamanhos fluidos: crescem com a tela (--vw/--vh já compensam o zoom das telas grandes). */
+  --text-hero: clamp(56px, calc(6.8 * var(--vw)), 100px);
+  --text-hero--line-height: 0.94;
+  --text-hero-sm: min(54px, calc(13.4 * var(--vw)));
+  --text-hero-sm--line-height: 0.95;
+  --text-hero-md: clamp(48px, calc(6.4 * var(--vw)), 68px);
+  --text-hero-md--line-height: 0.94;
+  --text-hero-lg: clamp(48px, min(calc(6.8 * var(--vw)), calc(11 * var(--vh))), 100px);
+  --text-hero-lg--line-height: 0.94;
+  --text-title: clamp(34px, calc(4.6 * var(--vw)), 64px);
+  --text-title--line-height: 1;
+  --text-title-about: clamp(34px, calc(4.2 * var(--vw)), 56px);
+  --text-title-about--line-height: 1.04;
+  --text-contact: clamp(48px, calc(7.2 * var(--vw)), 104px);
+  --text-contact--line-height: 0.98;
+  --text-email: clamp(24px, calc(3.2 * var(--vw)), 44px);
+  --text-email--line-height: 1.25;
+  --text-email-sm: min(26px, calc((100 * var(--vw) - 32px) / 14.6));
+  --text-email-sm--line-height: 1.25;
+  --text-deco: clamp(140px, calc(20 * var(--vw)), 280px);
+  --text-deco--line-height: 1;
 }
 
 @layer base {

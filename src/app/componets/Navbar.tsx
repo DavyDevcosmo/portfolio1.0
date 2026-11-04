@@ -26,7 +26,7 @@ const Navbar = () => {
 			>
 				<a
 					href="#inicio"
-					className="flex items-center gap-3 font-display text-[20px] font-extrabold tracking-[-0.02em] max-sm:text-[18px]"
+					className="flex items-center gap-3 font-display text-xl font-extrabold tracking-tight max-sm:text-lg"
 					onClick={closeMenu}
 				>
 					<Image
@@ -40,12 +40,12 @@ const Navbar = () => {
 					DAVY COSMO
 				</a>
 
-				<div className="flex items-center justify-center gap-7 text-[15px] font-normal max-md:hidden">
+				<div className="flex items-center justify-center gap-7 text-base font-normal max-md:hidden">
 					{links.map((link) => (
 						<a
 							key={link.href}
 							href={link.href}
-							className="hover:underline hover:decoration-[3px] hover:underline-offset-[6px]"
+							className="hover:underline hover:decoration-3 hover:underline-offset-6"
 						>
 							{link.label.toUpperCase()}
 						</a>
@@ -54,7 +54,7 @@ const Navbar = () => {
 
 				<a
 					href="#contato"
-					className={`${btn} min-h-11 justify-self-end rounded-brut border-3 border-ink bg-emerald px-[18px] py-2.5 font-display text-ink shadow-[4px_4px_0_var(--color-ink)] max-md:hidden`}
+					className={`${btn} min-h-11 justify-self-end rounded-brut border-3 border-ink bg-emerald px-4.5 py-2.5 font-display text-ink shadow-hard-4 shadow-ink max-md:hidden`}
 				>
 					Fale comigo
 					<ArrowIcon />
@@ -63,7 +63,7 @@ const Navbar = () => {
 				<button
 					type="button"
 					onClick={() => setIsOpen((open) => !open)}
-					className={`${btn} size-11 justify-self-end rounded-[10px] border-3 border-ink bg-emerald p-0 text-ink shadow-[3px_3px_0_var(--color-ink)] md:hidden`}
+					className={`${btn} size-11 justify-self-end rounded-lg border-3 border-ink bg-emerald p-0 text-ink shadow-hard-3 shadow-ink md:hidden`}
 					aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
 					aria-expanded={isOpen}
 				>
@@ -79,7 +79,7 @@ const Navbar = () => {
 							key={link.href}
 							href={link.href}
 							onClick={closeMenu}
-							className={`flex min-h-[52px] items-center font-display text-[22px] leading-[1.2] font-semibold text-paper ${i === links.length - 1 ? "mb-3.5" : ""
+							className={`flex min-h-13 items-center font-display text-2xl leading-tight font-semibold text-paper ${i === links.length - 1 ? "mb-3.5" : ""
 								} ${link.href === "#stack" ? "max-sm:hidden" : ""}`}
 						>
 							{link.label}
@@ -88,7 +88,7 @@ const Navbar = () => {
 					<a
 						href="#contato"
 						onClick={closeMenu}
-						className={`${btn} min-h-12 rounded-brut border-3 border-emerald bg-emerald px-[18px] py-3 font-display text-[16px] text-ink shadow-[4px_4px_0_var(--color-ink)]`}
+						className={`${btn} min-h-12 rounded-brut border-3 border-emerald bg-emerald px-4.5 py-3 font-display text-base text-ink shadow-hard-4 shadow-ink`}
 					>
 						Fale comigo
 						<ArrowIcon />
