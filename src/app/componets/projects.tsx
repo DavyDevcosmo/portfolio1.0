@@ -30,37 +30,37 @@ const projects: Project[] = [
 		kind: "Portfólio · 02",
 		description:
 			"Meu portfólio pessoal: apresenta quem eu sou, minhas ferramentas e os projetos que construí, com uma interface neo-brutalista pensada para UX e acessibilidade.",
-		image: "/img/bg-portfolio.png",
-		alt: "Tela do portfólio de Davy Cosmo",
+		image: "/img/portfolio-preview.png",
+		alt: "Topo do portfólio de Davy Cosmo com o título Sua ideia, funcionando na web e a foto do Davy",
 		demoUrl: "https://www.davycosmo.com",
 		technologies: ["Next.js", "Tailwind", "Vercel"],
 	},
 ];
 
-const actionBtn = `${btn} min-h-11 rounded-brut border-3 border-ink px-[18px] py-3 font-display text-ink shadow-[4px_4px_0_var(--color-ink)] max-sm:flex-1`;
+const actionBtn = `${btn} min-h-11 rounded-brut border-3 border-ink px-4.5 py-3 font-display text-ink shadow-hard-4 shadow-ink max-sm:flex-1`;
 
 const Projects = () => {
 	return (
 		<section
 			id="projetos"
-			className="border-b-3 border-ink bg-ink text-paper lg:flex lg:min-h-[calc(var(--h-full)_-_74px)] lg:flex-col lg:justify-center"
+			className="border-b-3 border-ink bg-ink text-paper"
 		>
 			<div
-				className={`${secWrap} lg:gap-[clamp(20px,calc(3.4*var(--vh)),48px)] lg:py-[clamp(32px,calc(5*var(--vh)),80px)]`}
+				className={`${secWrap} lg:py-20`}
 			>
 				<div className={secHead}>
-					<div className="flex max-w-[720px] flex-col gap-5 lg:gap-[clamp(10px,calc(1.8*var(--vh)),20px)]">
+					<div className="flex max-w-180 flex-col gap-5">
 						<span className={`${tag} bg-accent text-ink`}>&lt;Projetos /&gt;</span>
 						<h2
-							className={`${h2} text-[clamp(34px,calc(4.6*var(--vw)),64px)] leading-none lg:text-[clamp(30px,min(calc(4.6*var(--vw)),calc(6.4*var(--vh))),64px)]`}
+							className={`${h2} text-title leading-none`}
 						>
 							Cases que saíram{" "}
-							<br className="lg:hidden" />
+							<br />
 							do papel.
 						</h2>
 					</div>
 					<a
-						className={`${btn} min-h-11 rounded-brut border-3 border-paper bg-paper px-[22px] py-3.5 font-display text-ink shadow-[5px_5px_0_var(--color-accent)] max-sm:w-full`}
+						className={`${btn} min-h-11 rounded-brut border-3 border-paper bg-paper px-5.5 py-3.5 font-display text-ink shadow-hard-5 shadow-accent max-sm:w-full`}
 						href="https://github.com/DavyDevcosmo"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -74,9 +74,10 @@ const Projects = () => {
 					{projects.map((project) => (
 						<article
 							key={project.title}
-							className={`${card} flex flex-col overflow-hidden rounded-brut border-3 border-paper bg-paper text-ink shadow-[10px_10px_0_var(--color-accent)] max-sm:shadow-[6px_6px_0_var(--color-accent)]`}
+							className={`${card} flex flex-col overflow-hidden rounded-brut border-3 border-paper bg-paper text-ink shadow-hard-10 shadow-accent max-sm:shadow-hard-6`}
 						>
-							<div className="relative aspect-[16/10] border-b-3 border-ink bg-white lg:aspect-auto lg:h-[clamp(110px,calc(16*var(--vh)),260px)]">
+							{/* A imagem é o destaque do card e aparece inteira: os prints são 16:9, como o espaço. */}
+							<div className="relative aspect-video border-b-3 border-ink bg-white">
 								<Image
 									src={project.image}
 									alt={project.alt}
@@ -85,24 +86,22 @@ const Projects = () => {
 									className="object-cover"
 								/>
 							</div>
-							<div className="flex flex-auto flex-col gap-[18px] p-8 max-sm:gap-3.5 max-sm:p-5 lg:gap-[clamp(10px,calc(1.6*var(--vh)),18px)] lg:p-[clamp(18px,calc(2.8*var(--vh)),32px)]">
+							<div className="flex flex-auto flex-col gap-4.5 p-8 max-sm:gap-3.5 max-sm:p-5">
 								<div className="flex items-center justify-between gap-3">
-									<span className="font-mono text-[13px] font-bold tracking-[.06em] uppercase">
-										{project.kind}
-									</span>
-									<span className="flex-none rounded-full border-2 border-ink bg-emerald px-2.5 py-1 font-mono text-[12px] font-bold">
+									<span className="font-mono text-sm font-bold tracking-wider uppercase">{project.kind}</span>
+									<span className="flex-none rounded-full border-2 border-ink bg-emerald px-2.5 py-1 font-mono text-xs font-bold">
 										No ar
 									</span>
 								</div>
-								<h3 className="font-display text-[44px] leading-none font-black tracking-[-0.035em] max-sm:text-[32px] lg:text-[clamp(28px,calc(4.6*var(--vh)),44px)]">
+								<h3 className="font-display text-5xl leading-none font-black tracking-tight max-sm:text-3xl">
 									{project.title}
 								</h3>
-								<p className="text-[16px] leading-[1.65] font-medium max-sm:text-[15px] lg:text-[15px] lg:leading-[1.55]">
+								<p className="text-base leading-relaxed font-medium">
 									{project.description}
 								</p>
 								<ul className="flex flex-wrap gap-2">
 									{project.technologies.map((tech) => (
-										<li key={tech} className={`${chip} bg-white px-2 py-1 text-[12px]`}>
+										<li key={tech} className={`${chip} bg-white px-2 py-1 text-xs`}>
 											{tech}
 										</li>
 									))}
