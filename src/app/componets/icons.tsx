@@ -40,21 +40,6 @@ export const ArrowUpIcon = ({ size = 22 }: IconProps) => (
 	</svg>
 );
 
-export const MailIcon = ({ size = 22 }: IconProps) => (
-	<svg {...stroke(size, 2.2)}>
-		<rect width="20" height="16" x="2" y="4" rx="2" />
-		<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-	</svg>
-);
-
-export const MergeIcon = ({ size = 12 }: IconProps) => (
-	<svg {...stroke(size, 2.5)}>
-		<circle cx="18" cy="18" r="3" />
-		<circle cx="6" cy="6" r="3" />
-		<path d="M6 21V9a9 9 0 0 0 9 9" />
-	</svg>
-);
-
 export const MenuIcon = ({ open }: { open: boolean }) => (
 	<svg {...stroke(20, 2.6)}>
 		<path d={open ? "M6 6l12 12M18 6 6 18" : "M4 7h16M4 12h16M4 17h16"} />
