@@ -1,4 +1,5 @@
 import { ArrowIcon } from "./icons";
+import NewTab, { NEW_TAB } from "./newTab";
 import { btn, chip, h2, secHead, secWrap, tag } from "./ui";
 
 const pullRequests = [
@@ -47,8 +48,8 @@ const OpenSource = () => {
 							projeto dos outros.
 						</h2>
 						<p className="max-w-140 text-lg leading-relaxed font-medium text-copy">
-							Contribuições na plataforma da He4rt Devs e no typescript4noobs, curso gratuito de
-							TypeScript em português — todas revisadas e mergeadas pelos mantenedores.
+							{pullRequests.length} PRs na plataforma da He4rt Devs e no typescript4noobs, curso
+							gratuito de TypeScript em português, todos revisados e mergeados pelos mantenedores.
 						</p>
 					</div>
 					<a
@@ -58,6 +59,7 @@ const OpenSource = () => {
 						rel="noopener noreferrer"
 					>
 						Todos os PRs
+						<NewTab />
 						<ArrowIcon />
 					</a>
 				</div>
@@ -85,7 +87,7 @@ const OpenSource = () => {
 										href={`https://github.com/${pr.repo}/pull/${pr.number}`}
 										target="_blank"
 										rel="noopener noreferrer"
-										aria-label={`Abrir PR #${pr.number} no GitHub`}
+										aria-label={`Abrir PR #${pr.number} no GitHub${NEW_TAB}`}
 										className={`${btn} size-11 flex-none rounded-lg border-2 border-ink bg-emerald p-0 text-ink shadow-hard-3 shadow-ink`}
 									>
 										<ArrowIcon size={16} />

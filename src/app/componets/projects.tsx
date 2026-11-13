@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowIcon } from "./icons";
-import { btn, card, chip, h2, secHead, secWrap, tag } from "./ui";
+import NewTab from "./newTab";
+import { GITHUB_URL, btn, card, chip, h2, secHead, secWrap, tag } from "./ui";
 
 type Project = {
 	title: string;
@@ -37,7 +38,9 @@ const projects: Project[] = [
 	},
 ];
 
-const actionBtn = `${btn} min-h-11 rounded-brut border-3 border-ink px-4.5 py-3 font-display text-ink shadow-hard-4 shadow-ink max-sm:flex-1`;
+const moreBtn = `${btn} min-h-11 rounded-brut border-3 border-paper bg-paper px-5.5 py-3.5 font-display text-ink shadow-hard-5 shadow-accent max-sm:w-full`;
+
+const actionBtn =`${btn} min-h-11 rounded-brut border-3 border-ink px-4.5 py-3 font-display text-ink shadow-hard-4 shadow-ink max-sm:flex-1`;
 
 const Projects = () => {
 	return (
@@ -59,14 +62,10 @@ const Projects = () => {
 							do papel.
 						</h2>
 					</div>
-					<a
-						className={`${btn} min-h-11 rounded-brut border-3 border-paper bg-paper px-5.5 py-3.5 font-display text-ink shadow-hard-5 shadow-accent max-sm:w-full`}
-						href="https://github.com/DavyDevcosmo"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+					<a className={`${moreBtn} max-sm:hidden`} href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
 						Mais no GitHub
 						<ArrowIcon />
+						<NewTab />
 					</a>
 				</div>
 
@@ -114,7 +113,9 @@ const Projects = () => {
 										rel="noopener noreferrer"
 									>
 										Ver online
+										<span className="sr-only">: {project.title}</span>
 										<ArrowIcon size={16} />
+										<NewTab />
 									</a>
 									{project.githubUrl && (
 										<a
@@ -124,6 +125,8 @@ const Projects = () => {
 											rel="noopener noreferrer"
 										>
 											Código
+											<span className="sr-only"> do {project.title}</span>
+											<NewTab />
 										</a>
 									)}
 								</div>
@@ -131,6 +134,13 @@ const Projects = () => {
 						</article>
 					))}
 				</div>
+
+				{/* No celular o link geral vem depois das provas, não antes. */}
+				<a className={`${moreBtn} sm:hidden`} href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+					Mais no GitHub
+					<ArrowIcon />
+					<NewTab />
+				</a>
 			</div>
 		</section>
 	);

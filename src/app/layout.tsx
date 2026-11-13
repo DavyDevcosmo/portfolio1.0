@@ -1,31 +1,25 @@
-import type { Metadata } from "next";
-import { Anton, JetBrains_Mono, Montserrat, Poppins } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Big_Shoulders_Display, Martian_Mono, Schibsted_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+// Pôster do herói: condensada de cartaz de rua (sinalização de Chicago), só o peso 900.
+const poster = Big_Shoulders_Display({
 	subsets: ["latin"],
-	weight: ["400", "500", "600", "700"],
-	variable: "--font-montserrat-family",
+	weight: "900",
+	variable: "--font-poster-family",
 	display: "swap",
 });
 
-const poppins = Poppins({
+// Títulos e texto: grotesca de jornal, um arquivo variável (400–900) para todos os pesos.
+const grotesk = Schibsted_Grotesk({
 	subsets: ["latin"],
-	weight: ["600", "700", "800", "900"],
-	variable: "--font-poppins-family",
+	variable: "--font-grotesk-family",
 	display: "swap",
 });
 
-const anton = Anton({
+// Etiquetas <Nome /> e metadados: mono larga, com cara de rotuladora.
+const mono = Martian_Mono({
 	subsets: ["latin"],
-	weight: "400",
-	variable: "--font-anton-family",
-	display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-	subsets: ["latin"],
-	weight: ["500", "700"],
 	variable: "--font-mono-family",
 	display: "swap",
 });
@@ -33,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
 	title: "Davy Cosmo",
 	description:
-		"Desenvolvedor front-end Freelancer, especializado em React, Next.js e desenvolvimento web moderno",
+		"Davy Cosmo, desenvolvedor full-stack (Next.js, React, TypeScript) aberto a vagas e freelas.",
 	authors: [{ name: "Davy", url: "https://Davycosmo.com" }],
 	keywords: [
 		"portfolio",
@@ -41,16 +35,20 @@ export const metadata: Metadata = {
 		"react",
 		"next.js",
 		"criação de sites",
+		"full-stack",
 		"front-end",
 		"davy cosmo",
 	],
-	manifest: "/favicon/site.webmanifest",
-	themeColor: "#ffffff",
+	manifest: "/site.webmanifest",
 	appleWebApp: {
 		capable: true,
 		statusBarStyle: "black-translucent",
 		title: "Davy Cosmo",
 	},
+};
+
+export const viewport: Viewport = {
+	themeColor: "#e5ead6",
 };
 
 export default function RootLayout({
@@ -61,7 +59,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="pt-BR"
-			className={`scroll-smooth ${montserrat.variable} ${poppins.variable} ${anton.variable} ${jetbrainsMono.variable}`}
+			className={`scroll-smooth ${poster.variable} ${grotesk.variable} ${mono.variable}`}
 		>
 			<body className="antialiased">{children}</body>
 		</html>

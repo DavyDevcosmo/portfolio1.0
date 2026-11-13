@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Logs e capturas do Playwright mudam o tempo todo e disparavam rebuild em loop. */
+@source not "../../.playwright-mcp";
+@source not "../../.impeccable";
+
 /* Neo-brutalismo: borda 3px, sombra dura, raio 14px. Lime do logo é o acento; esmeralda fica para status. */
 @theme {
   /* Breakpoints em px: sm = acima do celular, tab = tablet, md = acima do menu mobile, lg = desktop. */
@@ -34,21 +38,45 @@
   --shadow-hard-8: 8px 8px 0 #0a0f1c;
   --shadow-hard-10: 10px 10px 0 #0a0f1c;
 
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
   --animate-marquee: marquee 45s linear infinite;
-  --animate-bob: bob 1.8s ease-in-out infinite;
+  /* Herói "impresso": cada camada entra como uma passada de tinta. `backwards` deixa o estado final sem clip. */
+  --animate-print: print 650ms var(--ease-out-expo) backwards;
+  --animate-line: line 600ms var(--ease-out-expo) backwards;
+  --animate-stamp: stamp 360ms var(--ease-out-expo) backwards;
+  --animate-drop: drop 220ms var(--ease-out-expo);
+  /* Cursor de terminal: aceso/apagado sem transição. */
+  --animate-blink: blink 900ms step-end 300ms infinite;
 
   @keyframes marquee {
     to { transform: translateX(-50%); }
   }
-  @keyframes bob {
-    50% { translate: 0 -7px; }
+  @keyframes print {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0); }
+  }
+  @keyframes line {
+    from { clip-path: inset(0 0 100% 0); transform: translateY(0.35em); }
+    to { clip-path: inset(0); transform: none; }
+  }
+  @keyframes stamp {
+    from { opacity: 0; transform: scale(1.25) rotate(-4deg); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes drop {
+    from { clip-path: inset(0 0 100% 0); }
+    to { clip-path: inset(0); }
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
   }
 }
 
 @theme inline {
-  --font-display: var(--font-poppins-family), system-ui, sans-serif;
-  --font-body: var(--font-montserrat-family), system-ui, sans-serif;
-  --font-poster: var(--font-anton-family), var(--font-poppins-family), sans-serif;
+  --font-display: var(--font-grotesk-family), system-ui, sans-serif;
+  --font-body: var(--font-grotesk-family), system-ui, sans-serif;
+  --font-poster: var(--font-poster-family), var(--font-grotesk-family), sans-serif;
   --font-mono: var(--font-mono-family), ui-monospace, monospace;
 
   /* Tamanhos fluidos: crescem com a tela (--vw/--vh já compensam o zoom das telas grandes). */
@@ -99,12 +127,15 @@
 
   :focus-visible { outline: 3px solid var(--color-blue); outline-offset: 3px; }
 
+  /* Evita palavra sozinha na última linha dos parágrafos. */
+  p { text-wrap: pretty; }
+
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
   }
 }
 
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-thumb { background-color: var(--color-emerald); border-radius: 4px; }
+::-webkit-scrollbar-thumb { background-color: var(--color-emerald); border-radius: 6px; }
 ::-webkit-scrollbar-thumb:hover { background-color: #07a16a; }
 ::-webkit-scrollbar-track { background-color: var(--color-ink); }

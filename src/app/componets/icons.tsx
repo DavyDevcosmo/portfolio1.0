@@ -34,6 +34,12 @@ export const GithubIcon = ({ size = 20 }: IconProps) => (
 	</svg>
 );
 
+export const DownloadIcon = ({ size = 20 }: IconProps) => (
+	<svg {...stroke(size, 2.5)}>
+		<path d="M12 3v12M7 10l5 5 5-5M5 21h14" />
+	</svg>
+);
+
 export const ArrowUpIcon = ({ size = 22 }: IconProps) => (
 	<svg {...stroke(size, 2.8)}>
 		<path d="M12 19V5M5 12l7-7 7 7" />

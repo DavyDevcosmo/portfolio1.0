@@ -1,34 +1,47 @@
-import { Fragment } from "react";
+"use client";
+
+import { Fragment, useEffect, useRef, useState } from "react";
 import { tools } from "./toolIcons";
 
-
 const Tools = () => {
+	// Fora da tela o loop para: não gasta CPU com algo que ninguém vê.
+	const [offscreen, setOffscreen] = useState(false);
+	const ref = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const el = ref.current;
+		if (!el) return;
+		const observer = new IntersectionObserver(([entry]) => setOffscreen(!entry.isIntersecting));
+		observer.observe(el);
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<div
+			ref={ref}
 			id="stack"
-			className="group overflow-hidden border-b-3 border-emerald bg-ink max-sm:hidden motion-reduce:overflow-x-auto"
+			className="group relative overflow-hidden border-b-3 border-emerald bg-ink max-sm:hidden motion-reduce:overflow-x-auto"
 		>
-			<div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+			<div
+				className={`flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none ${
+					offscreen ? "[animation-play-state:paused]" : ""
+				}`}
+			>
 				{[0, 1].map((copy) => (
 					<ul
 						key={copy}
 						aria-label={copy === 0 ? "Ferramentas que uso" : undefined}
 						aria-hidden={copy === 1 ? true : undefined}
-						className="flex items-center gap-14 py-6 pr-14"
+						className="flex items-center gap-14 py-5 pr-14"
 					>
 						{tools.map((tool, i) => (
 							<Fragment key={tool.name}>
 								{tool.group === "test" && tools[i - 1]?.group === "build" && (
-									<li className="h-12 w-0.75 bg-paper" aria-hidden="true" />
+									<li className="h-10 w-0.75 bg-paper" aria-hidden="true" />
 								)}
 								<li>
-									<svg
-										role="img"
-										aria-label={tool.name}
-										viewBox={tool.viewBox}
-										fill={tool.fill}
-										className="block size-10"
-									>
+									{/* Só o ícone na tela; o nome fica para leitor de tela e para o tooltip. */}
+									<svg viewBox={tool.viewBox} fill={tool.fill} className="block size-10" role="img">
 										<title>{tool.name}</title>
 										{tool.paths.map((path) => (
 											<path key={path.d.slice(0, 24)} d={path.d} fill={path.fill} />

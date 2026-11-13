@@ -11,7 +11,16 @@ export const btn = `inline-flex items-center justify-center gap-2.5 whitespace-n
 export const card =
 	"transition-transform duration-150 hover:[transform:translate(-3px,-3px)_rotate(-.4deg)] motion-reduce:transition-none motion-reduce:hover:[transform:none]";
 
-export const wrap = "mx-auto w-full max-w-310 px-6 max-sm:px-4";
+export const EMAIL = "davydevcosmo@gmail.com";
+
+export const LINKEDIN_URL = "https://www.linkedin.com/in/davy-cosmo-2713152b5";
+export const GITHUB_URL = "https://github.com/DavyDevcosmo";
+
+// Exporta o Google Docs como PDF: o clique baixa o arquivo sempre na versão mais recente do CV.
+export const CV_URL =
+	"https://docs.google.com/document/d/1Zb-l9rXLwU_anb1RmjCY29NkowHLhNNZc4bOfbVNDz8/export?format=pdf";
+
+export const wrap ="mx-auto w-full max-w-310 px-6 max-sm:px-4";
 
 // Container interno das seções padrão (o padding vertical do desktop fica em cada seção).
 export const secWrap = `${wrap} flex flex-col gap-12 py-26 max-sm:gap-7 max-sm:py-14`;
