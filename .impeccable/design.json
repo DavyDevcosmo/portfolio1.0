@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-12T17:35:26.536Z",
+  "title": "Design System: Davy Cosmo — Portfólio",
+  "extensions": {
+    "colorMeta": {
+      "accent-lime": {
+        "role": "primary",
+        "displayName": "Lime de Marca",
+        "canonical": "#96d700",
+        "tonalRamp": [
+          "#263600",
+          "#425f00",
+          "#5f8800",
+          "#7bb100",
+          "#98d804",
+          "#b3e246",
+          "#ceec87",
+          "#e9f7c9"
+        ]
+      },
+      "action-emerald": {
+        "role": "secondary",
+        "displayName": "Esmeralda de Ação",
+        "canonical": "#0ac481",
+        "tonalRamp": [
+          "#033120",
+          "#045639",
+          "#067c51",
+          "#08a16a",
+          "#0ec583",
+          "#4dd4a3",
+          "#8ce3c4",
+          "#cbf2e4"
+        ]
+      },
+      "focus-blue": {
+        "role": "tertiary",
+        "displayName": "Azul de Foco",
+        "canonical": "#4079ff",
+        "tonalRamp": [
+          "#101e40",
+          "#1c3570",
+          "#284ca1",
+          "#3563d1",
+          "#437bff",
+          "#749eff",
+          "#a5c0ff",
+          "#d6e3ff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#0a0f1c",
+        "tonalRamp": [
+          "#030407",
+          "#04070c",
+          "#060912",
+          "#080c17",
+          "#0e1320",
+          "#4d515a",
+          "#8c8e94",
+          "#cbcccf"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#f1f3ec",
+        "tonalRamp": [
+          "#3c3d3b",
+          "#6a6b68",
+          "#989995",
+          "#c6c8c2",
+          "#f1f3ec",
+          "#f5f6f1",
+          "#f8f9f6",
+          "#fcfcfb"
+        ]
+      },
+      "sage": {
+        "role": "neutral",
+        "displayName": "Sálvia",
+        "canonical": "#e5ead6",
+        "tonalRamp": [
+          "#393b36",
+          "#65675e",
+          "#909487",
+          "#bcc0b0",
+          "#e5ead7",
+          "#ecf0e1",
+          "#f3f5ec",
+          "#f9fbf6"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Painel",
+        "canonical": "#e3e6dc",
+        "tonalRamp": [
+          "#393a37",
+          "#646561",
+          "#8f918b",
+          "#babdb5",
+          "#e3e6dd",
+          "#ebede6",
+          "#f2f3ef",
+          "#f9faf8"
+        ]
+      },
+      "copy": {
+        "role": "neutral",
+        "displayName": "Cópia",
+        "canonical": "#2a3040",
+        "tonalRamp": [
+          "#0b0c10",
+          "#13151c",
+          "#1b1e28",
+          "#232735",
+          "#2d3343",
+          "#646974",
+          "#9b9ea5",
+          "#d2d3d6"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Apagado",
+        "canonical": "#3d4452",
+        "tonalRamp": [
+          "#0f1115",
+          "#1b1e24",
+          "#262b34",
+          "#323843",
+          "#404755",
+          "#727781",
+          "#a4a7ae",
+          "#d6d7da"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Branco",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#404040",
+          "#707070",
+          "#a1a1a1",
+          "#d1d1d1",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff",
+          "#ffffff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "poster": {
+        "displayName": "Poster",
+        "purpose": "Título do herói, caixa alta, uma vez por página."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de seção em Schibsted Grotesk extrabold."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de cards e projetos."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto corrido em Schibsted Grotesk 500."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Etiquetas, chips e metadados em Martian Mono."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hard-1",
+        "value": "1px 1px 0 #0a0f1c",
+        "purpose": "Estado active (afundado)."
+      },
+      {
+        "name": "hard-3",
+        "value": "3px 3px 0 #0a0f1c",
+        "purpose": "Botões de ícone pequenos e setas de PR."
+      },
+      {
+        "name": "hard-4",
+        "value": "4px 4px 0 #0a0f1c",
+        "purpose": "Botões do herói e do cabeçalho."
+      },
+      {
+        "name": "hard-5",
+        "value": "5px 5px 0 #0a0f1c",
+        "purpose": "Botões de contato e cards compactos."
+      },
+      {
+        "name": "hard-6",
+        "value": "6px 6px 0 #0a0f1c",
+        "purpose": "Cards de habilidade."
+      },
+      {
+        "name": "hard-7",
+        "value": "7px 7px 0 #0a0f1c",
+        "purpose": "Estado hover dos botões."
+      },
+      {
+        "name": "hard-8",
+        "value": "8px 8px 0 #0a0f1c",
+        "purpose": "Painel git log."
+      },
+      {
+        "name": "hard-10-lime",
+        "value": "10px 10px 0 #96d700",
+        "purpose": "Cards de projeto sobre fundo ink."
+      }
+    ],
+    "motion": [
+      {
+        "name": "press",
+        "value": "120ms ease-in-out",
+        "purpose": "Levantar no hover e afundar no clique em botões."
+      },
+      {
+        "name": "card-lift",
+        "value": "150ms; translate(-3px,-3px) rotate(-.4deg)",
+        "purpose": "Hover de cards."
+      },
+      {
+        "name": "marquee",
+        "value": "45s linear infinite",
+        "purpose": "Carrossel de ferramentas; desligado com movimento reduzido."
+      },
+      {
+        "name": "bob",
+        "value": "1.8s ease-in-out infinite",
+        "purpose": "Oscilação vertical de 7px em elementos decorativos."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "641px"
+      },
+      {
+        "name": "tab",
+        "value": "720px"
+      },
+      {
+        "name": "md",
+        "value": "961px"
+      },
+      {
+        "name": "lg",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão CTA (esmeralda)",
+      "kind": "button",
+      "refersTo": "button-cta",
+      "description": "Chamada principal para contato.",
+      "html": "<button class=\"ds-b ds-cta\">Fale comigo <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-b{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font-weight:700;cursor:pointer;border:3px solid #0a0f1c;border-radius:14px;color:#0a0f1c;font-family:'Schibsted Grotesk',system-ui,sans-serif;transition:transform 120ms ease-in-out,box-shadow 120ms ease-in-out}.ds-b:hover{transform:translate(-2px,-2px)}.ds-b:active{transform:translate(3px,3px)}.ds-b:focus-visible{outline:3px solid #4079ff;outline-offset:3px}.ds-cta{background:#0ac481;padding:10px 18px;min-height:44px;box-shadow:4px 4px 0 #0a0f1c}.ds-cta:hover{box-shadow:7px 7px 0 #0a0f1c}.ds-cta:active{box-shadow:1px 1px 0 #0a0f1c}"
+    },
+    {
+      "name": "Botão Acento (lime)",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "Ação de marca, como abrir o CV.",
+      "html": "<button class=\"ds-b ds-acc\">CV</button>",
+      "css": ".ds-b{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font-weight:700;cursor:pointer;border:3px solid #0a0f1c;border-radius:14px;color:#0a0f1c;font-family:'Schibsted Grotesk',system-ui,sans-serif;transition:transform 120ms ease-in-out,box-shadow 120ms ease-in-out}.ds-b:hover{transform:translate(-2px,-2px)}.ds-b:active{transform:translate(3px,3px)}.ds-b:focus-visible{outline:3px solid #4079ff;outline-offset:3px}.ds-acc{background:#96d700;height:54px;padding:0 18px;text-transform:uppercase;letter-spacing:.05em;box-shadow:4px 4px 0 #0a0f1c}.ds-acc:hover{box-shadow:7px 7px 0 #0a0f1c}.ds-acc:active{box-shadow:1px 1px 0 #0a0f1c}"
+    },
+    {
+      "name": "Botão Ink de ícone",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Quadrado de 54px para redes, sombra lime.",
+      "html": "<button class=\"ds-b ds-ink\" aria-label=\"LinkedIn\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 4h4v16H4zM10 9h4v2c1-1.6 2.6-2.4 4.5-2.4C21 8.6 22 10.3 22 13v7h-4v-6c0-1.3-.6-2-1.8-2-1.3 0-2.2.8-2.2 2.2V20h-4z\"/></svg></button>",
+      "css": ".ds-b{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font-weight:700;cursor:pointer;border:3px solid #0a0f1c;border-radius:14px;color:#0a0f1c;font-family:'Schibsted Grotesk',system-ui,sans-serif;transition:transform 120ms ease-in-out,box-shadow 120ms ease-in-out}.ds-b:hover{transform:translate(-2px,-2px)}.ds-b:active{transform:translate(3px,3px)}.ds-b:focus-visible{outline:3px solid #4079ff;outline-offset:3px}.ds-ink{background:#0a0f1c;color:#fff;width:54px;height:54px;padding:0;box-shadow:5px 5px 0 #96d700}.ds-ink:hover{box-shadow:7px 7px 0 #96d700}.ds-ink:active{box-shadow:1px 1px 0 #96d700}"
+    },
+    {
+      "name": "Botão Branco",
+      "kind": "button",
+      "refersTo": "button-paper",
+      "description": "Ação secundária sobre fundo claro ou escuro.",
+      "html": "<button class=\"ds-b ds-wht\">Mais no GitHub <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-b{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;font-weight:700;cursor:pointer;border:3px solid #0a0f1c;border-radius:14px;color:#0a0f1c;font-family:'Schibsted Grotesk',system-ui,sans-serif;transition:transform 120ms ease-in-out,box-shadow 120ms ease-in-out}.ds-b:hover{transform:translate(-2px,-2px)}.ds-b:active{transform:translate(3px,3px)}.ds-b:focus-visible{outline:3px solid #4079ff;outline-offset:3px}.ds-wht{background:#fff;padding:14px 22px;min-height:44px;box-shadow:5px 5px 0 #0a0f1c}.ds-wht:hover{box-shadow:7px 7px 0 #0a0f1c}.ds-wht:active{box-shadow:1px 1px 0 #0a0f1c}"
+    },
+    {
+      "name": "Etiqueta de Seção",
+      "kind": "chip",
+      "refersTo": "tag-section",
+      "description": "Rótulo mono no formato <Nome />.",
+      "html": "<span class=\"ds-tag\">&lt;Projetos /&gt;</span>",
+      "css": ".ds-tag{display:inline-block;background:#96d700;color:#0a0f1c;border-radius:8px;padding:6px 12px;font:700 16px 'Martian Mono',ui-monospace,monospace}"
+    },
+    {
+      "name": "Chip de tecnologia",
+      "kind": "chip",
+      "refersTo": "chip-tech",
+      "description": "Tecnologia usada no projeto.",
+      "html": "<span class=\"ds-chip\">Next.js 15</span>",
+      "css": ".ds-chip{display:inline-block;white-space:nowrap;background:#fff;color:#0a0f1c;border:2px solid #0a0f1c;border-radius:6px;padding:4px 8px;font:700 12px 'Martian Mono',ui-monospace,monospace}"
+    },
+    {
+      "name": "Card de habilidade",
+      "kind": "card",
+      "refersTo": "card-skill",
+      "description": "Cartão branco com sombra dura; variante inversa em ink.",
+      "html": "<article class=\"ds-card\"><h3>Front-end</h3><p>React, Next.js, TypeScript, Tailwind CSS</p></article>",
+      "css": ".ds-card{background:#fff;color:#0a0f1c;border:3px solid #0a0f1c;border-radius:14px;padding:26px;box-shadow:6px 6px 0 #0a0f1c;display:flex;flex-direction:column;gap:12px;font-family:'Schibsted Grotesk',system-ui,sans-serif;transition:transform 150ms}.ds-card:hover{transform:translate(-3px,-3px) rotate(-.4deg)}.ds-card h3{margin:0;font:800 24px/1.33 'Schibsted Grotesk',system-ui,sans-serif}.ds-card p{margin:0;font-weight:500;font-size:16px;line-height:1.5}"
+    },
+    {
+      "name": "Card de projeto",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "Cartão de papel com sombra lime sobre fundo ink.",
+      "html": "<article class=\"ds-proj\"><span class=\"ds-k\">SaaS · 01</span><h3>PsicoPro</h3><p>Gestão simples para psicólogos e clínicas.</p></article>",
+      "css": ".ds-proj{background:#f1f3ec;color:#0a0f1c;border:3px solid #f1f3ec;border-radius:14px;padding:32px;box-shadow:10px 10px 0 #96d700;display:flex;flex-direction:column;gap:16px;font-family:'Schibsted Grotesk',system-ui,sans-serif;transition:transform 150ms}.ds-proj:hover{transform:translate(-3px,-3px) rotate(-.4deg)}.ds-k{font:700 14px 'Martian Mono',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-proj h3{margin:0;font:900 48px/1 'Schibsted Grotesk',system-ui,sans-serif;letter-spacing:-.025em}.ds-proj p{margin:0;font-weight:500;line-height:1.6}"
+    },
+    {
+      "name": "Navegação",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Cabeçalho sálvia: logo, links em caixa alta e CTA.",
+      "html": "<nav class=\"ds-nav\"><strong>DAVY COSMO</strong><a href=\"#sobre\">SOBRE</a><a href=\"#projetos\">FREELANCER</a><a href=\"#contato\">CONTATO</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:28px;background:#e5ead6;padding:12px 24px;color:#0a0f1c;font-family:'Schibsted Grotesk',system-ui,sans-serif}.ds-nav strong{font:800 20px 'Schibsted Grotesk',system-ui,sans-serif;letter-spacing:-.025em;margin-right:auto}.ds-nav a{color:inherit;text-decoration:none}.ds-nav a:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}.ds-nav a:focus-visible{outline:3px solid #4079ff;outline-offset:3px}"
+    },
+    {
+      "name": "Terminal git log",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Painel de PRs com barra ink em mono.",
+      "html": "<div class=\"ds-term\"><div class=\"ds-bar\">git log --author=DavyDevcosmo</div><div class=\"ds-row\"><span>he4rt/heartdevs.com · #553</span><b>feat(portal): refinamento visual</b></div></div>",
+      "css": ".ds-term{background:#fff;color:#0a0f1c;border:3px solid #0a0f1c;border-radius:14px;overflow:hidden;box-shadow:8px 8px 0 #0a0f1c}.ds-bar{background:#0a0f1c;color:#f1f3ec;padding:14px 24px;font:700 14px 'Martian Mono',monospace;letter-spacing:.05em;text-transform:uppercase}.ds-row{padding:12px 20px;display:flex;flex-direction:column;gap:2px}.ds-row span{font:700 12px 'Martian Mono',monospace;color:#3d4452}.ds-row b{font:700 16px 'Schibsted Grotesk',system-ui,sans-serif}"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Cartaz de Código",
+    "overview": "O site é um pôster de desenvolvedor impresso em papel sálvia: títulos em caixa alta numa fonte condensada de cartaz (Big Shoulders Display), blocos chapados de cor recortados sem gradiente, bordas de tinta de 3px e sombras sólidas sem desfoque que fazem cada peça parecer um objeto físico. A voz de dev aparece nas etiquetas <Projetos />, no git log da seção de open source e na mono como assinatura. Nada é suave: a profundidade vem de deslocamento, não de luz.",
+    "keyCharacteristics": [
+      "Bordas de 3px em ink e raio de 14px em tudo que é objeto (botões, cards, painéis).",
+      "Sombras duras sem blur, em 4 cores possíveis (ink, lime, esmeralda, branco), que levantam no hover e afundam ao clicar.",
+      "Tipografia de pôster (Big Shoulders Display) só no herói; o resto é Schibsted Grotesk, pesada nos títulos e regular no texto.",
+      "Etiquetas em Martian Mono no formato <Nome />.",
+      "Lime marca a identidade, esmeralda age."
+    ],
+    "rules": [
+      {
+        "name": "A Regra Lime Marca, Esmeralda Age",
+        "body": "Lime é identidade (logo, realce, sombra de destaque). Esmeralda é função (clique, estado, status). Não troque um pelo outro e não use esmeralda como decoração.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Bloco Chapado",
+        "body": "Cor aparece em blocos sólidos e recortados. Sem gradientes, sem transparência decorativa que não seja o ruído de fundo bem baixo (8–12%) em marcas gigantes.",
+        "section": "colors"
+      },
+      {
+        "name": "A Regra do Pôster Único",
+        "body": "Big Shoulders Display aparece uma vez, no herói. Todos os demais títulos usam Schibsted Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Escala Fluida",
+        "body": "Tamanhos de título usam clamp() sobre --vw/--vh (que compensam o zoom do body em telas ≥1800px). Não use vw cru.",
+        "section": "typography"
+      },
+      {
+        "name": "A Regra da Sombra Sólida",
+        "body": "Nunca use blur, spread suave ou sombra translúcida. Se a sombra não é um deslocamento sólido de uma cor da paleta, está errada.",
+        "section": "elevation"
+      },
+      {
+        "name": "A Regra da Cor de Contraste",
+        "body": "Em fundo ink, a sombra deve ser lime ou esmeralda; ink sobre ink não aparece.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do manter bordas de ink 3px e raio de 14px em todo objeto principal.",
+      "Do usar sombras duras sólidas (4–10px) e trocar a cor da sombra por lime ou esmeralda em fundo ink.",
+      "Do reservar Big Shoulders Display ao herói e Schibsted Grotesk aos demais títulos.",
+      "Do usar lime para marca e destaque, esmeralda para ação e status.",
+      "Do marcar seções com etiquetas mono <Nome />.",
+      "Do manter alvos de toque ≥44px e o anel de foco azul de 3px visível.",
+      "Do desativar transformações e animações contínuas sob prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't usar blur, sombras translúcidas, glassmorphism ou gradientes.",
+      "Don't usar esmeralda como cor decorativa nem lime como cor de estado.",
+      "Don't usar Big Shoulders Display fora do título do herói.",
+      "Don't usar valores arbitrários do Tailwind quando existir classe da escala; recorrentes viram tokens no @theme.",
+      "Don't usar vw cru em tipografia: use --vw/--vh para respeitar o zoom de telas grandes.",
+      "Don't usar o azul de foco fora do anel de foco.",
+      "Don't inventar depoimentos, métricas ou clientes em cards (ver PRODUCT.md)."
+    ]
+  }
+}
