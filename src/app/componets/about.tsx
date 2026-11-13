@@ -1,4 +1,12 @@
+import StrokeText, { type StrokeLine } from "./strokeText";
 import { card, h2, secWrap } from "./ui";
+
+// Mesmas quebras do título em texto corrido; "sistema inteiro" leva o realce lime.
+const titleLines: StrokeLine[] = [
+	[{ text: "Entrego o " }, { text: "sistema", highlight: true }],
+	[{ text: "inteiro", highlight: true }, { text: " do banco à" }],
+	[{ text: "interface." }],
+];
 
 const skills = [
 	{ title: "Front-end", text: "React, Next.js, TypeScript, Tailwind CSS, Zustand, Zod" },
@@ -24,14 +32,14 @@ const About = () => {
 				<div className="grid grid-cols-2 items-start gap-14 max-md:grid-cols-1">
 					<div className="flex flex-col gap-6">
 						<h2 className={`${h2} text-title-about`}>
-							A cada tela, uma nova chance de{" "}
-							<span className="box-decoration-clone bg-accent px-[.12em]">encantar</span> o usuário.
+							<span className="sr-only">Entrego o sistema inteiro do banco à interface.</span>
+							<StrokeText lines={titleLines} />
 						</h2>
 						<p className="max-w-140 text-lg leading-relaxed font-medium max-sm:text-base">
-							Me chamo Davy e sou desenvolvedor full-stack freelancer. Comecei no front-end com
-							React e hoje construo SaaS completos: autenticação, pagamentos, banco de dados e a
-							interface. Estou cursando Ciência da Computação e tenho paixão por
-							experiência do usuário e acessibilidade.
+							Me chamo Davy, sou desenvolvedor full-stack freelancer e estudo Ciência da
+							Computação. Comecei com React e hoje construo SaaS completos: autenticação,
+							pagamentos, banco de dados e a interface, com experiência do usuário e
+							acessibilidade como prioridade.
 						</p>
 						<p className="max-w-140 text-lg leading-relaxed font-medium max-sm:text-base">
 							Também participo da comunidade <strong>He4rt Devs</strong>, onde aprendo e contribuo
